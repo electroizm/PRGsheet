@@ -67,7 +67,7 @@ Proje, ayarları, API anahtarlarını ve veritabanı kimlik bilgilerini güvenli
 
 **İsmail Güneş**
 
-[![X (formerly Twitter) URL](https://img.shields.io/badge/X-Follow%20@Guneslsmail-black?logo=x&style=for-the-badge)](https://x.com/Guneslsmail)
+[![X (Twitter) URL](https://x.com/Guneslsmail/photo)](https://x.com/Guneslsmail)
 
 **Proje Başlangıç Tarihi:** 15.11.2024
 
