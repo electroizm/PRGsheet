@@ -65,9 +65,41 @@ Proje, ayarları, API anahtarlarını ve veritabanı kimlik bilgilerini güvenli
 
 ## Yazar
 
-**İsmail Güneş**
-
-[![X (Twitter) URL](https://x.com/Guneslsmail/photo)](https://x.com/Guneslsmail)
+<div data-spark-custom-html="true">
+    <table cellspacing="0" cellpedding="0" border="0" style="font-family: sans-serif; -webkit-tap-highlight-color: rgba(26, 26, 26, 0.3); caret-color: rgb(255, 255, 255); margin-bottom: 4px;">
+        <tbody>
+            <tr>
+                <td>
+                    <font style="font-size: 13px;"><img src="https://res.spikenow.com/c/?id=576ji8df6q7d6eq2&amp;s=48&amp;m=c&amp;_ts=1xc0n1" width="27" height="27" style="vertical-align: bottom;"></font>
+                </td>
+                <td width="4" nowrap="nowrap">
+                    <font style="font-size: 13px;">&nbsp;</font>
+                </td>
+                <td><a href="https://twitter.com/Guneslsmail" style="text-decoration: none; color: rgb(207, 142, 255) !important;"><b style="color: rgb(0, 132, 255);">
+                            <font style="font-size: 13px;">İsmail Güneş</font>
+                        </b></a></td>
+                <td>
+                    <font style="font-size: 13px;"><img alt="1xc0n1" width="17" height="17" src="https://spikenow.com/t/"></font>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table cellspacing="0" cellpedding="0" border="0" style="font-family: sans-serif; -webkit-tap-highlight-color: rgba(26, 26, 26, 0.3); caret-color: rgb(255, 255, 255); margin-bottom: 4px;">
+        <tbody>
+            <tr>
+                <td width="4" nowrap="nowrap">
+                    <font style="font-size: 12px;">&nbsp;</font>
+                </td>
+                <td><a href="https://www.instagram.com/dogtasbatman/" style="text-decoration: none; color: rgb(207, 142, 255) !important;"><b style="color: rgb(0, 132, 255);">
+                            <font style="font-size: 12px;">Güneşler Elektronik<br>Mühendislik Mobilya</font>
+                        </b></a></td>
+                <td>
+                    <font style="font-size: 12px;"><br></font>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 **Proje Başlangıç Tarihi:** 15.11.2024
 
