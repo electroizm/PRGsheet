@@ -73,8 +73,8 @@ Proje, ayarları, API anahtarlarını ve veritabanı kimlik bilgilerini güvenli
                      <img src="https://res.spikenow.com/c/?id=576ji8df6q7d6eq2&amp;s=48&amp;m=c&amp;_ts=1xc0n1" width="27" height="27" style="border-radius: 50%; display: block;">
                 </td>
                 <td style="vertical-align: top; border: none; padding: 0;">
-                    <a href="https://twitter.com/Guneslsmail" style="text-decoration: none !important; color: #0084ff !important; font-size: 13px; font-weight: bold; display: block; line-height: 1.2;">İsmail Güneş</a>
-                    <a href="https://www.instagram.com/dogtasbatman/" style="text-decoration: none !important; color: #0084ff !important; font-size: 12px; font-weight: bold; line-height: 1.2; display: block; margin-top: 2px;">Güneşler Elektronik<br>Mühendislik Mobilya</a>
+                    <div style="line-height: 1.2;"><a href="https://twitter.com/Guneslsmail" style="text-decoration: none !important; color: #0084ff !important; font-size: 13px; font-weight: bold;">İsmail Güneş</a></div>
+                    <div style="line-height: 1.2; margin-top: 2px;"><a href="https://www.instagram.com/dogtasbatman/" style="text-decoration: none !important; color: #0084ff !important; font-size: 12px; font-weight: bold;">Güneşler Elektronik<br>Mühendislik Mobilya</a></div>
                 </td>
             </tr>
         </tbody>
