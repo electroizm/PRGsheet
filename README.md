@@ -1,6 +1,6 @@
 # PRG Proje Analizi & Otomasyon Araçları
 
-Bu depo, ERP entegrasyonu, veri analizi ve raporlama için tasarlanmış Python betiklerinin bir koleksiyonunu içerir. Araçlar, stok yönetimi, sipariş işleme, finansal raporlama ve servis operasyonları gibi çeşitli iş süreçlerini otomatize etmek için öncelikle SQL Server veritabanları ve Google E-Tablolar (Sheets) ile etkileşime girer.
+Bu programlar yani .exe dosyaları, ERP entegrasyonu, veri analizi ve raporlama için tasarlanmış Python betiklerinin bir koleksiyonunu içerir. Araçlar, stok yönetimi, sipariş işleme, finansal raporlama ve servis operasyonları gibi çeşitli iş süreçlerini otomatize etmek için öncelikle SQL Server veritabanları ve Google E-Tablolar (Sheets) ile etkileşime girer.
 
 ## Proje Yapısı
 
