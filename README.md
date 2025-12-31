@@ -66,35 +66,15 @@ Proje, ayarları, API anahtarlarını ve veritabanı kimlik bilgilerini güvenli
 ## Yazar
 
 <div data-spark-custom-html="true">
-    <table cellspacing="0" cellpedding="0" border="0" style="font-family: sans-serif; -webkit-tap-highlight-color: rgba(26, 26, 26, 0.3); caret-color: rgb(255, 255, 255); margin-bottom: 4px;">
+    <table cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; border: none; font-family: sans-serif;">
         <tbody>
             <tr>
-                <td>
-                    <font style="font-size: 13px;"><img src="https://res.spikenow.com/c/?id=576ji8df6q7d6eq2&amp;s=48&amp;m=c&amp;_ts=1xc0n1" width="27" height="27" style="vertical-align: bottom;"></font>
+                <td style="vertical-align: top; border: none; padding: 0 8px 0 0;">
+                     <img src="https://res.spikenow.com/c/?id=576ji8df6q7d6eq2&amp;s=48&amp;m=c&amp;_ts=1xc0n1" width="27" height="27" style="border-radius: 50%; display: block;">
                 </td>
-                <td width="4" nowrap="nowrap">
-                    <font style="font-size: 13px;">&nbsp;</font>
-                </td>
-                <td><a href="https://twitter.com/Guneslsmail" style="text-decoration: none; color: rgb(207, 142, 255) !important;"><b style="color: rgb(0, 132, 255);">
-                            <font style="font-size: 13px;">İsmail Güneş</font>
-                        </b></a></td>
-                <td>
-                    <font style="font-size: 13px;"><img alt="1xc0n1" width="17" height="17" src="https://spikenow.com/t/"></font>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table cellspacing="0" cellpedding="0" border="0" style="font-family: sans-serif; -webkit-tap-highlight-color: rgba(26, 26, 26, 0.3); caret-color: rgb(255, 255, 255); margin-bottom: 4px;">
-        <tbody>
-            <tr>
-                <td width="4" nowrap="nowrap">
-                    <font style="font-size: 12px;">&nbsp;</font>
-                </td>
-                <td><a href="https://www.instagram.com/dogtasbatman/" style="text-decoration: none; color: rgb(207, 142, 255) !important;"><b style="color: rgb(0, 132, 255);">
-                            <font style="font-size: 12px;">Güneşler Elektronik<br>Mühendislik Mobilya</font>
-                        </b></a></td>
-                <td>
-                    <font style="font-size: 12px;"><br></font>
+                <td style="vertical-align: top; border: none; padding: 0;">
+                    <a href="https://twitter.com/Guneslsmail" style="text-decoration: none !important; color: #0084ff !important; font-size: 13px; font-weight: bold; display: block; line-height: 1.2;">İsmail Güneş</a>
+                    <a href="https://www.instagram.com/dogtasbatman/" style="text-decoration: none !important; color: #0084ff !important; font-size: 12px; font-weight: bold; line-height: 1.2; display: block; margin-top: 2px;">Güneşler Elektronik<br>Mühendislik Mobilya</a>
                 </td>
             </tr>
         </tbody>
