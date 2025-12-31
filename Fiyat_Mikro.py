@@ -30,8 +30,8 @@ from central_config import CentralConfigManager
 # LOGGING CONFIGURATION
 # ============================================================================
 
-# Log dosyasina yaz (konsol yok)
-# PyInstaller ile freeze edildiginde dosya yollarini duzelt
+# Log dosyasına yaz (konsol yok)
+# PyInstaller ile freeze edildiğinde dosya yollarini duzelt
 if getattr(sys, 'frozen', False):
     base_dir = Path(sys.executable).parent
 else:
@@ -61,7 +61,7 @@ class FiyatMikroConfig:
     Artık:
     - Service account credentials kodda YOK
     - Dosya yolları environment variable'da YOK
-    - Ayarlar PRGsheets'ten çekiliyor
+    - Ayarlar PRGsheet'ten çekiliyor
     """
 
     def __init__(self):
@@ -69,7 +69,7 @@ class FiyatMikroConfig:
             # Merkezi config manager oluştur (Service Account otomatik başlar)
             self.config_manager = CentralConfigManager()
 
-            # PRGsheets'ten ayarları yükle
+            # PRGsheet'ten ayarları yükle
             self.settings = self.config_manager.get_settings()
 
             logger.info("Config yüklendi")

@@ -282,10 +282,14 @@ class GoogleSheetsManager:
         # Özel sütunların indekslerini bul
         cari_kodu_index = None
         kalem_no_index = None
+        telefon_index = None
+        
         if 'Cari Kodu' in data.columns:
             cari_kodu_index = data.columns.get_loc('Cari Kodu')
         if 'Kalem No' in data.columns:
             kalem_no_index = data.columns.get_loc('Kalem No')
+        if 'Telefon' in data.columns:
+            telefon_index = data.columns.get_loc('Telefon')
 
         # Veriyi satır satır ekle, None değerleri boş string yap
         for _, row in data.iterrows():
@@ -298,6 +302,9 @@ class GoogleSheetsManager:
                     row_values.append(f"'{str(value)}")  # Apostrofla başlat
                 elif col_index == kalem_no_index:
                     # Kalem No için özel işlem - büyük sayıları text olarak formatla
+                    row_values.append(f"'{str(value)}")  # Apostrofla başlat
+                elif col_index == telefon_index:
+                    # Telefon için özel işlem - text olarak formatla
                     row_values.append(f"'{str(value)}")  # Apostrofla başlat
                 elif isinstance(value, (int, float)):
                     row_values.append(value)
