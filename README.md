@@ -63,6 +63,14 @@ Proje, ayarları, API anahtarlarını ve veritabanı kimlik bilgilerini güvenli
     ```
     (Not: Belirli komut satırı argümanları veya ortam gereksinimleri için bireysel betikleri kontrol edin).
 
+## Yazar
+
+**İsmail Güneş**
+
+[![X (formerly Twitter) URL](https://img.shields.io/badge/X-Follow%20@Guneslsmail-black?logo=x&style=for-the-badge)](https://x.com/Guneslsmail)
+
+**Proje Başlangıç Tarihi:** 15.11.2024
+
 ---
 
 # Proje Kod Dosyaları Detaylı Dokümantasyonu
