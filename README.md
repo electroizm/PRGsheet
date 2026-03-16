@@ -35,10 +35,54 @@ Proje, ayarları, API anahtarlarını ve veritabanı kimlik bilgilerini güvenli
 - **`SanalPos.py`**: Excel raporları ve SQL Server verileri arasındaki Sanal POS işlemlerini mutabakatını yapar.
 - **`OKC.py`**: OKC (Ödeme Kaydedici Cihaz) fatura verilerini analiz eder.
 
+#### 🏆 Bayi Ticari Prim (HGO)
+
+- **`HGO.py` / `hgo_module.py`**: Doğtaş Bayi Ticari Prim (HGO) Hesaplama Sistemi. Doğtaş API entegrasyonu ile sipariş/fatura verilerini çekerek dönemsel prim hesaplaması yapar. Kademeli prim oranları, aylık hedef takibi, tahmin ve öneri sistemi içerir.
+
 #### 🛠️ Servis & Operasyonlar
 
 - **`Montaj.py`**: Kurulum ve montaj hizmetlerini takip eder.
 - **`SSH.py`**: "Servis Sipariş Hareketleri" / Satış sonrası hizmetlerini analiz eder.
+
+## PRG Masaüstü Uygulaması
+
+Proje, tüm modülleri tek bir arayüzde birleştiren **PyQt5** tabanlı modern bir masaüstü uygulaması içerir. Uygulama `PRG/main.py` üzerinden çalışır ve `PRG.exe` olarak tek dosya halinde dağıtılabilir.
+
+### Mimari
+
+- **Modüler Yapı**: Her iş süreci bağımsız bir modül olarak geliştirilmiştir (`*_module.py`).
+- **Event Bus**: Modüller arası iletişim için merkezi olay sistemi.
+- **Tema Yönetimi**: Dark tema desteği ile modern arayüz.
+- **Navigation Bar**: Üst menüden tek tıkla modüller arası geçiş.
+- **Global Data Cache**: Google Sheets verilerini bellekte önbelleğe alarak performans optimizasyonu.
+- **Şifre Koruması**: Ayarlar ve Virman modülleri Google Sheets üzerindeki `Pass` sayfasından okunan şifrelerle korunur.
+
+### Modüller
+
+| Modül | Dosya | Açıklama |
+|-------|-------|----------|
+| Stok | `stok_module.py` | Stok analizi ve envanter yönetimi |
+| Sevkiyat | `sevkiyat_module.py` | Sevkiyat planlama ve takibi |
+| Barkod | `barkod_module.py` | Barkod okuma ve veri işleme |
+| Sözleşme | `sozlesme_module.py` | Sözleşme yönetimi |
+| ÖKC YazarKasa | `okc_module.py` | Ödeme Kaydedici Cihaz verileri |
+| Risk | `risk_module.py` | Müşteri risk değerlendirmesi |
+| SSH | `ssh_module.py` | Servis Sipariş Hareketleri |
+| Kasa | `kasa_module.py` | Kasa işlemleri ve takibi |
+| Virman | `virman_module.py` | Hesaplar arası virman işlemleri |
+| Sanal Pos | `sanalpos_module.py` | Sanal POS mutabakatı |
+| İrsaliye | `irsaliye_module.py` | İrsaliye oluşturma ve takibi |
+| Fiyat | `fiyat_module.py` | Fiyat analizi ve karşılaştırma |
+| **HGO** | `hgo_module.py` | **Doğtaş Bayi Ticari Prim Hesaplama** |
+| Ayarlar | `ayar_module.py` | Uygulama ayarları (şifre korumalı) |
+
+### EXE Oluşturma
+
+```bash
+pyinstaller PRG_onefile.spec
+```
+
+Oluşan `PRG.exe` dosyası `dist/` klasöründe bulunur. Tüm bağımlılıklar ve modüller tek dosyada paketlenir.
 
 ## Temel Özellikler
 
@@ -206,7 +250,31 @@ Sanal POS üzerinden geçen tahsilatların muhasebeleşmesini kontrol eder.
 
 - Resmi muhasebe kayıtları ile fiili satışları karşılaştırır.
 
-## 4. Operasyon ve Servis
+## 4. Bayi Ticari Prim (HGO)
+
+### `HGO.py` / `hgo_module.py`
+
+**Ne İşe Yarar?**
+Doğtaş bayileri için ticari prim (HGO - Hedef Gerçekleştirme Oranı) hesaplama sistemidir. Dönemsel sipariş ve fatura verilerine göre bayi prim hak edişini hesaplar.
+
+**Detaylı İşleyiş:**
+
+- **Doğtaş API Entegrasyonu:** `PrimApiClient` sınıfı ile Doğtaş API'sine bağlanır. Sipariş (`OrderTotal`) ve fatura (`InvoiceTotal`) verilerini dönemsel olarak çeker.
+- **Dönem Yönetimi:** Her dönem 3 aylık periyotlardan oluşur (Ocak-Mart, Nisan-Haziran, Temmuz-Eylül, Ekim-Aralık). Kullanıcı yıl ve dönem seçimi yapabilir.
+- **Aylık Hedefler:** Google Sheets'teki `PRGsheet/Ayar` sayfasından aylık hedef tutarları okunur. Her ay için ayrı hedef belirlenebilir.
+- **HGO Hesaplama:** `PrimCalculator` sınıfı ile gerçekleşen sipariş tutarı hedefe bölünerek HGO oranı (%) hesaplanır.
+- **Kademeli Prim Oranları:**
+  - %0-79 HGO → %0 prim
+  - %80-89 HGO → %1 prim
+  - %90-99 HGO → %2 prim
+  - %100-109 HGO → %3 prim
+  - %110-119 HGO → %4 prim
+  - %120+ HGO → %5 prim
+- **Tahmin ve Öneri:** Mevcut sipariş trendine göre dönem sonu tahmini yapar. Bir üst prim kademesine ulaşmak için gereken ek sipariş tutarını hesaplar.
+- **Veri Önbelleği:** `_StorageManager` ile hesaplama sonuçları JSON formatında yerel olarak saklanır. Çevrimdışı erişim ve hızlı yükleme sağlar.
+- **Arka Plan İşleme:** `_DataFetchWorker` (QThread) ile API çağrıları arka planda yapılır, arayüz donmaz.
+
+## 5. Operasyon ve Servis (devam)
 
 ### `Montaj.py`
 
@@ -228,7 +296,7 @@ Satış sonrası hizmetler (SSH), yedek parça ve servis taleplerini yönetir.
 - Yedek parça siparişi gerekiyorsa bunların tedarik durumunu izler.
 - Excel'den okuduğu servis verilerini Google Sheets üzerinde merkezi bir tabloyla senkronize eder.
 
-## 5. Altyapı ve Yapılandırma
+## 6. Altyapı ve Yapılandırma
 
 ### `central_config.py`
 
